@@ -62,5 +62,9 @@ app.get('/about', (req , res) => {
   });
 } )
 
+app.get('/project', (req,res) => {
+  res.render('project.hbs', { project: 'My portfolio page', paragraph: 'projects here' } );
+});
+
 // binding app to the local port of the pc
 app.listen(port, () => console.log(`Server is up, running on port ${port}`) );
